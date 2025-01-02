@@ -12,8 +12,6 @@ On peut utiliser le type None si jamais on a une variable qui n'a pas encore de 
 age = None
 age = input("How old are you? ")
 ```
-Python est typé dynamiquement, ce qui signifie qu’une variable peut stocker n’importe quel type et que ce type peut changer.
-
 
 Toutes les fonctions doivent être définies avant d'être utilisées.
 La plupart des développeurs Python résolvent ce problème en définissant d'abord toutes les fonctions de leur programme, puis en dernier
