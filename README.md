@@ -13,6 +13,24 @@ age = None
 age = input("How old are you? ")
 ```
 Python est typé dynamiquement, ce qui signifie qu’une variable peut stocker n’importe quel type et que ce type peut changer.
+
+
 Toutes les fonctions doivent être définies avant d'être utilisées.
 La plupart des développeurs Python résolvent ce problème en définissant d'abord toutes les fonctions de leur programme, puis en dernier
 , ils appellent une fonction "point d'entrée". De cette façon, toutes les fonctions ont été lues par l'interpréteur Python avant que la première ne soit appelée.
+```
+def main():
+    health = 10
+    armor = 5
+    add_armor(health, armor)
+
+def add_armor(h, a):
+    new_health = h + a
+    print_health(new_health)
+
+def print_health(new_health):
+    print(f"The player now has {new_health} health")
+
+# call entrypoint last
+main()
+```
