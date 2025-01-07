@@ -2,9 +2,6 @@
 Module implementing a progress bar similar to tqdm.
 """
 
-import sys
-import shutil
-
 
 def ft_tqdm(lst: range) -> None:
     """
@@ -17,8 +14,7 @@ def ft_tqdm(lst: range) -> None:
         Current item in the range
     """
     total = len(lst)
-    terminal_width = shutil.get_terminal_size().columns
-    bar_length = min(50, terminal_width - 30)
+    bar_length = 50
 
     for i, item in enumerate(lst, 1):
         percentage = (i / total) * 100
@@ -27,9 +23,7 @@ def ft_tqdm(lst: range) -> None:
                ' ' * (bar_length - filled_length))
 
         output = f"\r{percentage:3.0f}%|[{bar}]| {i}/{total}"
-        sys.stdout.write(output)
-        sys.stdout.flush()
-
+        print(output, end='', flush=True)
         yield item
 
 
