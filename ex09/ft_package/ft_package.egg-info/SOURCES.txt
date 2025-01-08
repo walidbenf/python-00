@@ -1,8 +1,0 @@
-LICENSE
-README.md
-ft_package.py
-pyproject.toml
-ft_package.egg-info/PKG-INFO
-ft_package.egg-info/SOURCES.txt
-ft_package.egg-info/dependency_links.txt
-ft_package.egg-info/top_level.txt
