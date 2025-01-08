@@ -18,6 +18,7 @@ def count_characters(text: str) -> dict:
         dict: Contains counts for total chars, upper/lower letters,
               punctuation, spaces and digits
     """
+    text = text.replace('\n', '')  # Remove newline before counting
     counts = {
         'total': len(text),
         'upper': sum(1 for c in text if c.isupper()),
@@ -26,6 +27,7 @@ def count_characters(text: str) -> dict:
         'space': sum(1 for c in text if c == ' '),
         'digit': sum(1 for c in text if c.isdigit())
     }
+
     return counts
 
 
